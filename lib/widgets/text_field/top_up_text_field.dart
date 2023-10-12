@@ -15,12 +15,14 @@ class TopUpTextField extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    if(provider!.topUp != "0"){
-      var newValue = CurrencyFormat.convertToIdr2(int.parse(provider!.topUp), 0);
-      topUpController.value = TextEditingValue(
-        text: newValue,
-        selection: TextSelection.collapsed(offset: newValue.length),
-      );
+    if(provider!=null){
+      if(provider!.topUp != "0"){
+        var newValue = CurrencyFormat.convertToIdr2(int.parse(provider!.topUp), 0);
+        topUpController.value = TextEditingValue(
+          text: newValue,
+          selection: TextSelection.collapsed(offset: newValue.length),
+        );
+      }
     }
     return TextField(
       enableInteractiveSelection: false,
