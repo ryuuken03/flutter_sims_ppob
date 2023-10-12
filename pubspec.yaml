@@ -1,0 +1,40 @@
+name: sims
+description: SIMS PPOB.
+publish_to: 'none'
+version: 0.1.0
+
+environment:
+  sdk: '>=3.1.2 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_launcher_icons: ^0.13.1
+  provider: ^6.0.5
+  http: ^0.13.6
+  flutter_dotenv: ^5.1.0
+  cached_network_image:
+  intl: ^0.18.1
+  flutter_session_manager: ^1.0.3
+  image_picker: ^1.0.4
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0
+  
+flutter_launcher_icons:
+  android: "launcher_icon"
+  # ios: true
+  image_path_android: "assets/icon_launcher/Logo.png"
+  adaptive_icon_background: "#f42619"
+  adaptive_icon_foreground: "assets/icon_launcher/Logo.png"
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/
+    - assets/icon_launcher/
+    - assets/image/
+    - lib/.env
